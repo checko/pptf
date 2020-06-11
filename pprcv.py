@@ -9,7 +9,13 @@ while True:
 	sc, address = s.accept()
 
 	print(address)
-	f = open('rcvfile','wb')
+	fname = sc.recv(1024)
+	f = open(fname,'wb')
+	print(fname)
+
+	sc, address = s.accept()
+	print(address)
+	
 	while True:
 		l = sc.recv(1024)
 		while (l):
