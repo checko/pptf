@@ -6,6 +6,7 @@ s.bind((sys.argv[1],9999))
 s.listen(10)
 
 while True:
+	# filename
 	sc, address = s.accept()
 
 	print(address)
@@ -14,6 +15,7 @@ while True:
 	print(fname)
 	sc.close()
 
+	# file content
 	sc, address = s.accept()
 	print(address)
 	

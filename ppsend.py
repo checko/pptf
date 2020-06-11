@@ -2,11 +2,13 @@ import socket
 import sys
 import ntpath
 
+#filename
 s = socket.socket()
 s.connect((sys.argv[1],9999))
 s.send(ntpath.basename(sys.argv[2]).encode())
 s.close()
 
+#file content
 s = socket.socket()
 s.connect((sys.argv[1],9999))
 f = open(sys.argv[2],"rb")
